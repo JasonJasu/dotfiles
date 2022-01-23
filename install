@@ -3,7 +3,7 @@
 sudo echo "Installing some dependencies..."
 
 # wat else shold i put here....hhmmmmmmmm
-sudo pacman -S nitrogen zsh
+sudo pacman -S nitrogen
 
 echo "Copying config files..."
 
