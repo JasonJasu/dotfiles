@@ -1,6 +1,11 @@
 #!/bin/bash
 
-sudo echo "Copying config files..."
+sudo echo "Installing some dependencies..."
+
+# wat else shold i put here....hhmmmmmmmm
+sudo pacman -S nitrogen zsh
+
+echo "Copying config files..."
 
 cp .asoundrc .xinitrc .zshrc .zcompdump $HOME/
 cp -r aliases dwm wallpaper $HOME/.config/
