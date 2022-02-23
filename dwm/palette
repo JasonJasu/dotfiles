@@ -1,0 +1,10 @@
+/* dark red */
+static const char col_gray1[]       = "#631c48";
+static const char col_gray2[]       = "#9f265c";
+static const char col_gray3[]       = "#cf2967";
+static const char col_gray4[]       = "#f15b67";
+static const char col_cyan[]        = "#fed883";
+static const char col_cyan2[]       = "#fdb25f";
+
+
+
