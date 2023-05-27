@@ -1,0 +1,10 @@
+
+# Archaei :	Custom Aliases (need to source this file in rc config)
+
+alias vifm=vifmrun
+alias py=python
+alias vim=nvim
+alias lsa="ls -lah"
+alias mv="mv -v"
+alias cp="cp -v"
+alias duhd="du -hd 1"

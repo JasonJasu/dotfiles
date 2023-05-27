@@ -1,18 +1,11 @@
-# Configrepo
-Made for storing config files.
+# archaei's dotfiles
 
-## Precaution
-This repo's zsh config is not completely compatible (if thats the right word) at the moment. (yeah all you did to make this repo is just blindly copypaste files anyway..)
-If you want to proceed installing the config using the _install_ file, then i'd recommend you to edit that file and remove the .zshrc and .zcompsadapwdpowkq or something idk. (i forgor)
+This dotfiles was used in my old arch setup (no pun intended), and I'm warning you right now this is not intended for public use for the stuff and dirs placement i use here is all fucked up and messy (unreal). Actually nothing crazy happened here I just happened to save this configs to maybe use it as reference point and backups in the future (i still cant forget the moment i lost the og custom color palette and build i made back in 2020). Using X11 display server, dwm for the window manager, and jonaburg's picom fork. I guess i better list the stuffs then :
 
-## Credits
-I'd certainly put some credits here but i do not have time for that for now. maybe later, sorry ¯\ _ (ツ) _ /¯
-
-
-
-
-Oh right, btw...
-#### Why are you seeing this?
-The fact that you're reading this meaning that you are not allowed to access this repository without my discretion and therefore you should close this tab from your browser. 
-
-Not tryna being rude but it is what it is man c:
+## The 'Stuffs'
+- [Jonaburg's picom](https://github.com/jonaburg/picom) (compositor)
+- [dwm](https://dwm.suckless.org) (window manager) w/custom patch
+- alacritty (terminal)
+- feh (wallpaper loader)
+- [dmenu](https://tools.suckless.org/dmenu) (the swiss pocket knife, the legend itself) 
+- Nerd Fonts
