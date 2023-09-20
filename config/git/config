@@ -1,0 +1,7 @@
+[user]
+	name = JasonJasu
+	email = tejasukmanajason@gmail.com
+[core]
+	editor = nvim
+[credential]
+	helper = store --file ~/.config/git/.credcache
