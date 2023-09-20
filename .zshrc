@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/.config/dmenuScripts/
@@ -11,6 +14,10 @@ ZSH_THEME="rkj-repos"
 # archaei :	sourcing aliases and shell configs
 source ~/.config/shells/aliases
 source ~/.config/shells/zshPluginSources
+
+# ros and main workspace
+source /opt/ros/noetic/setup.zsh
+#source ~/main_ws/devel/setup.zsh
 
 # archaei :	thefuck configuration
 eval "$(thefuck --alias)"
@@ -89,7 +96,13 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+#
+
+# export ROS_MASTER_URI=http://192.168.0.5:11311/
+# export ROS_IP=192.168.0.5
+# export ROS_HOSTNAME=192.168.0.76
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export PATH=$PATH:/home/Jasont/.spicetify
