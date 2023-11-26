@@ -24,10 +24,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# ros and main workspace
-source /opt/ros/noetic/setup.zsh
-#source ~/main_ws/devel/setup.zsh
-
 # archaei :	thefuck configuration
 eval "$(thefuck --alias)"
 
@@ -106,10 +102,6 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 #
-
-# export ROS_MASTER_URI=http://192.168.0.5:11311/
-# export ROS_IP=192.168.0.5
-# export ROS_HOSTNAME=192.168.0.76
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
