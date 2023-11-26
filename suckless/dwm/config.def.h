@@ -14,8 +14,8 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static char buttonbar[]       = "<O>";
 static int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
-static char font[]            = "monospace:size=10";
-static char dmenufont[]       = "monospace:size=10";
+static char font[]            = "JetBrainsMono Nerd Font:size=10";
+static char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
 static const char *fonts[]    = { font };
 static char normbgcolor[]     = "#222222";
 static char normbordercolor[] = "#444444";
@@ -30,7 +30,7 @@ static char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "[main]", "[app]", "[csl]", "[med]", "[etc]" }; //5 out of 9 slot
+static const char *tags[] = { "[main]", "[csl]", "[app]", "[med]", "[etc]" }; //5 out of 9 slot
 // {"1","2","3","4","5","6","7","8","9"};											   
 
 static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
@@ -163,7 +163,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_Escape,      quit,           {0} },
 };
 
 /* button definitions */

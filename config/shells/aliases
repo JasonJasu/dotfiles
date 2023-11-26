@@ -8,3 +8,7 @@ alias lsa="ls -lah"
 alias mv="mv -v"
 alias cp="cp -v"
 alias duhd="du -hd 1"
+
+# suspend hibernate
+alias lpsleep="systemctl suspend"
+alias lpsleeper="systemctl hibernate"

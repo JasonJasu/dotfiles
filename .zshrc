@@ -6,14 +6,23 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=$PATH:$HOME/.config/dmenuScripts/
+export PATH="$PATH:$HOME/.config/dmenuScripts:$HOME/.local/bin"
 # Set name of the theme to load --- if set to "random", it will
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="rkj-repos"
 
 # archaei :	sourcing aliases and shell configs
 source ~/.config/shells/aliases
-source ~/.config/shells/zshPluginSources
+#source ~/.config/shells/zshPluginSources
+
+# ros and main workspace
+#source /opt/ros/noetic/setup.zsh
+#source ~/main_ws/devel/setup.zsh
+
+# pyenv loading
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # ros and main workspace
 source /opt/ros/noetic/setup.zsh
@@ -79,7 +88,7 @@ bindkey -v
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git z copyfile fzf zsh-vi-mode)
+plugins=(git z copyfile fzf zsh-vi-mode zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
