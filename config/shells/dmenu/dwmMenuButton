@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# archaei : 	Provide options for pressing dwm corner button
+# dmenu_run (dmenu), shutdown, restart, dwm termination
+
+promptmain="$(uname -n) :"
+optMain="Search for Applications\nFile Manager\nSystem Information\nTerminal\nClose DWM\nPower Option\nClose"
+promptConfirmation="Are you sure? [Confirmation]"
+optConfirmation="Yes\nNo"
+promptOffboot="Power Option"
+optOffboot="Shut down\nReboot\nSleep\nHibernate"
+promptSysinfo="System Information :"
+optSysinfo="Host/User : $(uname -n)/$(echo $USER)\nTime and Date : $(date)"
+
+# lazy function implementation (shut the fuck up i know)
+askPrompt() {
+	answer="$(echo -e $1 | dmenu -l 5 -c -i -p "$2" )"
+}
+answer="$(echo -e "$optMain" | dmenu -i -l 7 -p "$promptmain" )"
+
+case $answer in 
+	"Search for Applications")
+		dmenu_run -p "What application do you want to open? " -i -c -l 5
+    exit 0
+		;;
+	"Close DWM")
+		askPrompt "$optConfirmation" "$promptConfirmation"
+		if [[ $answer == "Yes" ]]; then
+			killall dwm
+		fi
+		exit 0
+		;;
+	"Power Option")
+		askPrompt "$optOffboot" "$promptOffboot"
+		case $answer in
+			"Shut down")
+				askPrompt "$optConfirmation" "$promptConfirmation"
+				if [[ $answer == "Yes" ]]; then
+					shutdown now
+				fi
+				exit 0
+				;;
+			"Reboot")
+				askPrompt "$optConfirmation" "$promptConfirmation"
+				if [[ $answer == "Yes" ]]; then
+					reboot
+				fi
+				exit 0
+				;;
+      "Sleep")
+        askPrompt "$optConfirmation" "$promptConfirmation"
+        if [[ $answer == "Yes" ]]; then
+          systemctl suspend
+        fi 
+        exit 0
+        ;;
+      "Hibernate")
+        askPrompt "$optConfirmation" "$promptConfirmation"
+        if [[ $answer == "Yes" ]]; then
+          systemctl hibernate
+        fi 
+        exit 0
+        ;;
+		esac
+    exit 0
+    ;;
+    "System Information")
+      askPrompt "$optSysinfo" "$promptSysinfo"
+      exit 0
+      ;;
+    "File Manager")
+      dolphin
+      exit 0
+      ;;
+    "Terminal")
+      alacritty
+      exit 0
+      ;;
+esac
+
+exit 0

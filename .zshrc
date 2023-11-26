@@ -1,36 +1,30 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
-
+export PATH=$HOME/.config/dmenuScripts:$HOME/.local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:$HOME/.config/dmenuScripts:$HOME/.local/bin"
+
+# archaei : sourcing configs
+source ~/.config/shells/aliases
+source ~/.config/shells/zshPluginSources
+
+# archaei : tmux launch session
+# if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+#     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
+# fi
 # Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
+
 ZSH_THEME="rkj-repos"
 
-# archaei :	sourcing aliases and shell configs
-source ~/.config/shells/aliases
-#source ~/.config/shells/zshPluginSources
-
-# ros and main workspace
-#source /opt/ros/noetic/setup.zsh
-#source ~/main_ws/devel/setup.zsh
-
-# pyenv loading
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# archaei :	thefuck configuration
-eval "$(thefuck --alias)"
-
-# archaei :	vi keybind shell (WHY NO WORK HUH??????????????????????/)
-bindkey -v
-
-# Set list of themes to pick from when loading at random Setting this variable when ZSH_THEME=random will cause zsh to load a theme from this variable instead of looking in $ZSH/themes/ If set to an empty array, this variable will have no effect.
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
@@ -82,9 +76,12 @@ bindkey -v
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git z copyfile fzf zsh-vi-mode zsh-autosuggestions)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git z fzf zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,9 +98,33 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-#
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export PATH=$PATH:/home/Jasont/.spicetify
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# archaei : append pre oh-my-zsh config
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/archaei/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+eval $(thefuck --alias)
+eval "$(pyenv init -)"

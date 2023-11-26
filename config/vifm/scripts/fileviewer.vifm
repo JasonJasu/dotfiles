@@ -1,4 +1,3 @@
-
  fileviewer *.pdf
         \ vifmimg pdf %px %py %pw %ph %c
         \ %pc

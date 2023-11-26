@@ -12,6 +12,13 @@
 source ~/.config/vifm/favicons.vifm
 source ~/.config/vifm/scripts/fileviewer.vifm
 
+    fileviewer <image/*>
+        \ vifmimg draw %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+
+
 " ------------------------------------------------------------------------------
 " Main settings
 " ------------------------------------------------------------------------------

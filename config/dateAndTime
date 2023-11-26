@@ -4,6 +4,7 @@
 
 while true
 do
+  # delete battery capacity if no battery
   xsetroot -name "$(< /sys/class/power_supply/BAT0/capacity)% | $(date +"%a, %d %b %Y") | $(date +"%I:%M:%S %p")"
 sleep 0.5s
 

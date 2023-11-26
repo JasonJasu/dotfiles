@@ -45,6 +45,7 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
 
-  use 'lervag/vimtex'  -- vimtex plugin
+  use 'lervag/vimtex' -- vimtex
+
 
 end)

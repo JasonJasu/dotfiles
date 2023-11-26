@@ -4,15 +4,14 @@ exec tail -n +3 $0
 # menu entries you want to add after this comment.  Be careful not to change
 # the 'exec tail' line above.
 
-# archaei : adding shutdown and reboot entry.
-
-submenu "Power Options  (Shutdown or Reboot)" {
-	menuentry "Shut down" {
-		echo "System Shutting down..."
+# 240422 - archaei: adding shutdown and reboot option to grub
+submenu "Turn off or Reboot" {
+	menuentry "Turn off the Computer" {
+		echo "Shutting Down..."
 		halt
 	}
 	menuentry "Reboot" {
-		echo "System Rebooting..."
+		echo "Rebooting system..."
 		reboot
 	}
 }
