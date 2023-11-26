@@ -32,7 +32,7 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 
 -- Delete tab/windows
-keymap.set('n', '<C-Q>', ':q<Return>')
+-- keymap.set('n', '<C-Q>', ':q<Return>')
 
 --
 -- keymap.set('n','<C-S>')
