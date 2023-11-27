@@ -27,9 +27,10 @@ keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
 -- Resize window
-keymap.set('n', '<C-w><left>', '<C-w><')
-keymap.set('n', '<C-w><right>', '<C-w>>')
-keymap.set('n', '<C-w><up>', '<C-w>+')
+keymap.set('n', 'sL', '<C-w><')
+keymap.set('n', 'sH', '<C-w>>')
+keymap.set('n', 'sK', '<C-w>+')
+keymap.set('n', 'sJ', '<C-w>-')
 
 -- Delete tab/windows
 keymap.set('n', '<C-Q>', ':q<Return>')

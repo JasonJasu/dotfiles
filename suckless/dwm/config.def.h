@@ -30,7 +30,7 @@ static char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "[main]", "[app]", "[csl]", "[med]", "[etc]" }; //5 out of 9 slot
+static const char *tags[] = { "[main]", "[csl]", "[app]", "[med]", "[etc]" }; //5 out of 9 slot
 // {"1","2","3","4","5","6","7","8","9"};											   
 
 static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
