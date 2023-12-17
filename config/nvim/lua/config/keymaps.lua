@@ -18,6 +18,8 @@ keymap.set("n", "<C-m>", "<C-i>", opts) -- Jumplist
 keymap.set("n", "te", ":tabedit<Return>", opts)
 keymap.set("n", "tn", ":tabnext<Return>", opts)
 keymap.set("n", "tN", ":tabprev<Return>", opts)
+keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<S-Tab>", ":tabprev<Return>", opts)
 
 -- Resize Windows
 keymap.set("n", "<C-w><left>", "<C-w><")
