@@ -31,6 +31,10 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' -- cmp source for built-in LSP
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
 
+  -- prettier
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
+
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
