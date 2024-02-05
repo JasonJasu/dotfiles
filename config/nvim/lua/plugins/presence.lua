@@ -1,5 +1,5 @@
 return {
-  "andweeb/presence.nvim",
+  "JasonJasu/presence.nvim",
   opts = {
     auto_update = true, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
     neovim_image_text = "no cap fr", -- Text displayed when hovered over the Neovim image
