@@ -72,6 +72,12 @@ ZSH_THEME="rkj-repos"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
+# archaei: enabling command caching
+
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt appendhistory
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -113,9 +119,6 @@ source $ZSH/oh-my-zsh.sh
 
 # archaei : append pre oh-my-zsh config
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -128,3 +131,5 @@ compinit
 
 eval $(thefuck --alias)
 eval "$(pyenv init -)"
+
+export PATH=$PATH:/home/archaei/.spicetify

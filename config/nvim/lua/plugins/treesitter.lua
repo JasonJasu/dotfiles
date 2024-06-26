@@ -18,7 +18,6 @@ return {
         "http",
         "java",
         "json",
-        "markdown",
         "php",
         "rust",
         "scss",
