@@ -1,4 +1,4 @@
-<head>archaei's dotfiles</head>
+<h1>archaei's dotfiles</h1>
 
 <br/>
 <div align="center">
@@ -9,6 +9,13 @@
 
 Writing a detailed config because I've been changing rigs and moving them metals atleast thrice in a year; no time to remember nor configure stuff in the midst of shitstorm. The dotfiles represented here have been used for atleast 4 years and still going strong. Nothing change much aside from personal customization and preferences; It's pretty damn stable.
 Desktop Configs are based on X11; Not much fancy, but its decent.
+
+<br/>
+<div align="center">
+  <a href="https://github.com/JasonJasu/dotfiles">
+    <img src="images/screenshot1.png">
+  </a>
+</div>
 
 # Table of Contents
 
@@ -28,13 +35,6 @@ Desktop Configs are based on X11; Not much fancy, but its decent.
   - [Picom (Compositor)](#picom-compositor)
   - [Other Useful Softwares](#other-useful-softwares)
   - [Starting xinit](#starting-xinit)
-
-<br/>
-<div align="center">
-  <a href="https://github.com/JasonJasu/dotfiles">
-    <img src="images/screenshot1.png">
-  </a>
-</div>
 
 # System Configurations
 
