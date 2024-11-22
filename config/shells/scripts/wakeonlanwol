@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# definition of MAC addresses
+Jason-PC=01:12:46:82:ab:4f
+options="Jason-PC\nQuit"
+
+answer="$(echo -e "$options" | dmenu -c -l 7 -p "WoL" )"
+
+
+case $answer is
+  "Jason-PC")
+    /usr/bin/wol $Jason-PC
+    ;;
+  "Quit")
+    exit 0
+    ;;
+esac
+
+exit 0
+
+
+#echo "Which PC to wake?"
+#echo "1) Jason-PC"
+#echo "q) quit"
+#read input1
+#case $input1 in
+#  m)
+#    /usr/bin/wol $Jason-PC
+#    ;;
+##  g)
+##    # uses wol over the internet provided that port 9 is forwarded to ghost on ghost's router
+##    /usr/bin/wol --port=9 --host=ghost.mydomain.org $ghost
+##    ;;
+#  Q|q)
+#    break
+#    ;;
+#esac
+

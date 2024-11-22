@@ -1,0 +1,17 @@
+[user]
+	name = 
+	email = 
+[core]
+	editor = nvim
+  packedGitLimit = 512m
+  packedGitWindowSize = 512m
+	compression = 0
+[credential]
+	helper = store --file ~/
+[http]
+	postBuffer = 524288000
+	version = HTTP/2
+[pack] 
+  deltaCacheSize = 2047m
+  packSizeLimit = 2047m
+  windowMemory = 2047m

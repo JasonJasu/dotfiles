@@ -1,8 +1,0 @@
-#!/bin/sh
-
-while true
-do
-  nmcli dev wifi list | grep \*
-sleep 0.2s
-
-done

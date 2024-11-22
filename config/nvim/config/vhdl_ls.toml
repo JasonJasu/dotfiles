@@ -1,7 +1,0 @@
-# File names are either absolute or relative to the parent folder of the vhdl_ls.toml file
-[libraries]
-lib2.files = ['pkg2.vhd']
-lib1.files = ['pkg1.vhd', 'tb_ent.vhd']
-
-# Wildcards are supported
-lib3.files = ['test/*.vhd', 'src/*.vhd', 'src/*/*.vhd']

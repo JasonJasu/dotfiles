@@ -23,10 +23,6 @@ return {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
-        vhdl_ls = {
-          cmd = { "vhdl_ls" },
-          filetypes = { "vhd", "vhdl" },
-        },
         cssls = {},
         tailwindcss = {
           root_dir = function(...)

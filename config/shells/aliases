@@ -1,14 +1,18 @@
-
 # Archaei :	Custom Aliases (need to source this file in rc config)
 
-alias vifm=vifmrun
-alias py=python
-alias vim=nvim
 alias lsa="ls -lah"
 alias la="ls -a"
 alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -v"
 alias duhd="du -hd 1"
-alias pacsyu="sudo pacman -Syu"
+alias pacsu="sudo pacman -Syu"
 alias lswc="ls | wc -l"
+alias tmux="tmux -u"
+alias ncdu="ncdu --color dark"
+
+alias sourcerc="source $ZDOTDIR/.zshrc"
+alias virc="nvim $ZDOTDIR/.zshrc"
+alias vifm="vifmrun"
+alias dvim="NVIM_APPNAME=nvim_default nvim"
+alias vim="NVIM_APPNAME=nvim_default nvim"

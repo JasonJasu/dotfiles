@@ -4,7 +4,7 @@ GRUB_DEFAULT=0
 GRUB_TIMEOUT=-1
 GRUB_DISTRIBUTOR="Arch"
 GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 rd.system.show_status=auto rd.udev.log_level=3"
-GRUB_CMDLINE_LINUX="resume=UUID=6f006214-6f92-48af-aa4f-a0ed915f0488"
+GRUB_CMDLINE_LINUX="resume=UUID=[UUID SWAP Partition]"
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"
@@ -45,7 +45,8 @@ GRUB_DISABLE_RECOVERY=true
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
 #GRUB_BACKGROUND="/path/to/wallpaper"
 #GRUB_THEME="/path/to/gfxtheme"
-GRUB_THEME="/boot/grub/themes/minegrub-theme/theme.txt"
+# archaei : assuming, your efi partition is loaded here.
+GRUB_THEME="/boot/grub/themes/[custom theme]/theme.txt"
 
 # Uncomment to get a beep at GRUB start
 #GRUB_INIT_TUNE="480 440 1"

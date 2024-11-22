@@ -1,7 +1,6 @@
-
 # Sourcing ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
 
 # archaei : ZshFZF config
-export FZF_BASE=/usr/bin/fzf
+# export FZF_BASE=/usr/bin/fzf
