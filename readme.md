@@ -8,8 +8,8 @@
 </div>
 <br/>
 
-| ![image1](images/screenshot1.png) | ![image2](images/screenshot2.png) |
-| --------------------------------- | --------------------------------- |
+| ![image1](images/screenshot1.png) | ![image2](images/screenshot2.png) | ![image3](/images/screenshot3) |
+| --------------------------------- | --------------------------------- | ------------------------------ |
 
 <br/>
 
@@ -30,10 +30,12 @@ Desktop Configs are based on X11; Not much fancy, but its decent.
 - [Desktop Environment](#desktop-environment)
   - [Video Driver](#video-driver)
   - [X11](#x11)
-  - [suckless - dwm and dmenu](#suckless-dwm-and-dmenu)
+  - [suckless - dwm and dmenu](#suckless---dwm-and-dmenu)
   - [Picom (Compositor)](#picom-compositor)
   - [Other Useful Softwares](#other-useful-softwares)
   - [Starting xinit](#starting-xinit)
+- [Extras](#extras)
+  - [Vimtex Configurations](#vimtex-configurations)
 
 # System Configurations
 
@@ -94,6 +96,8 @@ configure `/etc/udevmon.yaml`
 ```
 
 create systemd service for udevmon
+
+`/etc/systemd/system/udevmon.service`
 
 ```bash
 [Unit]
@@ -214,11 +218,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Desktop Environment
 
-Stepping in to the gui realm, always keep in mind to do all the previous steps before proceeding.
+Stepping in to the gui realm.
 
-These are the building blocks for the X11 desktop.
+These are the building blocks for the X11 desktop :
 
-- [picom](https://github.com/yshui/picom) (compositor)
+- [picom](https://github.com/jonaburg/picom) (compositor) <- Jonaburg's picom
 - [dwm](https://dwm.suckless.org/) (window manager)
 - [dmenu](http://tools.suckless.org/dmenu/) (dynamic menu)
 - nitrogen / feh (wallpaper manager)
@@ -279,4 +283,17 @@ Now that all is been set up, start dwm using xinit
 
 ```bash
 startx
+```
+
+# Extras
+
+## Vimtex Configurations
+
+Install texlive, copy nvim config, update lazyvim :
+
+```bash
+sudo pacman -S nvim texlive tree-sitter
+cp config/nvim $HOME/.config/ -r
+nvim # Accessing lazyvim dashboard ; <Space>l
+# <Leader>l to access vimtex. <Leader> as default is '\'.
 ```

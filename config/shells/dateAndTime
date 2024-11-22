@@ -2,9 +2,10 @@
 
 # archaei :	set time to xroot, in loop
 
-while true
-do
+while true; do
   xsetroot -name "$(date +"%a, %d %b %Y") | $(date +"%I:%M:%S %p")"
-sleep 0.5s
+  # archaei : display battery also
+  # xsetroot -name "$(</sys/class/power_supply/BAT0/capacity)% | $(date +"%a, %d %b %Y") | $(date +"%I:%M:%S %p")"
+  sleep 0.5s
 
 done
