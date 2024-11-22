@@ -3,19 +3,18 @@
 <br/>
 <div align="center">
   <a href="https://github.com/JasonJasu/dotfiles">
-    <img src="images/bornsleeper.png" alt="gae" width="500" height="500">
+    <img src="images/bornsleeper.png" alt="gae" width="500">
   </a>
 </div>
+<br/>
+
+| ![image1](images/screenshot1.png) | ![image2](images/screenshot2.png) |
+| --------------------------------- | --------------------------------- |
+
+<br/>
 
 Writing a detailed config because I've been changing rigs and moving them metals atleast thrice in a year; no time to remember nor configure stuff in the midst of shitstorm. The dotfiles represented here have been used for atleast 4 years and still going strong. Nothing change much aside from personal customization and preferences; It's pretty damn stable.
 Desktop Configs are based on X11; Not much fancy, but its decent.
-
-<br/>
-<div align="center">
-  <a href="https://github.com/JasonJasu/dotfiles">
-    <img src="images/screenshot1.png">
-  </a>
-</div>
 
 # Table of Contents
 
@@ -144,8 +143,9 @@ sudo pacman -Syu
 
 ## AUR Package Manager
 
-````bash
+```bash
 sudo pacman -S base-devel
+```
 
 - paru
 
@@ -154,7 +154,7 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 nvim PKGBUILD # is this jit lejit?
 makepkg -si # build
-````
+```
 
 or if ya wanna use [gay](https://github.com/Jguer/yay) do the same step; just change the repo.
 
@@ -169,7 +169,7 @@ sudo pacman -S $(cat fonts)
 (preferrably, use above command.) or :
 
 ```bash
-terminus-font ttf-bitstream-vera ttf-croscore gnu-free-fonts noto-fonts ttf-droid ttf-roboto ttf-ubuntu-font-family ttf-anonymous-pro ttf-hack ttf-inconsolata ttf-anonymous-pro ttf-fira-code ttc-iosevka ttf-jetbrains-mono ttf-roboto-mono adobe-source-code-pro-fonts ttf-fira-sans inter-font ttf-liberation ttf-opensans adobe-source-sans-fonts otf-crimson ttf-liberation ttf-junicode xorg-fonts-type1 ttf-scheherazade-new noto-fonts-cjk adobe-source-han-sans-kr-fonts noto-fonts noto-fonts-emoji libertinus-font otf-latin-modern otf-latinmodern-math ttf-jetbrains-mono-nerd
+sudo pacman -S terminus-font ttf-bitstream-vera ttf-croscore gnu-free-fonts noto-fonts ttf-droid ttf-roboto ttf-ubuntu-font-family ttf-anonymous-pro ttf-hack ttf-inconsolata ttf-anonymous-pro ttf-fira-code ttc-iosevka ttf-jetbrains-mono ttf-roboto-mono adobe-source-code-pro-fonts ttf-fira-sans inter-font ttf-liberation ttf-opensans adobe-source-sans-fonts otf-crimson ttf-liberation ttf-junicode xorg-fonts-type1 ttf-scheherazade-new noto-fonts-cjk adobe-source-han-sans-kr-fonts noto-fonts noto-fonts-emoji libertinus-font otf-latin-modern otf-latinmodern-math ttf-jetbrains-mono-nerd
 ```
 
 Check all installed fonts using [fontpreview](https://github.com/sdushantha/fontpreview).
