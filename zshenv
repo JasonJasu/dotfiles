@@ -20,3 +20,8 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export _Z_DATA="$XDG_CONFIG_HOME/z"
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+
+# archaei : npm
+export NPM_CONFIG_INIT_MODULE="$XDG_CONFIG_HOME"/npm/config/npm-init.js
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME"/npm
+export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR"/npm

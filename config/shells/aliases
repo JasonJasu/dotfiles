@@ -1,5 +1,6 @@
 # Archaei :	Custom Aliases (need to source this file in rc config)
 
+alias ls="ls -a"
 alias lsa="ls -lah"
 alias la="ls -a"
 alias mv="mv -v"
@@ -16,3 +17,6 @@ alias virc="nvim $ZDOTDIR/.zshrc"
 alias vifm="vifmrun"
 alias dvim="NVIM_APPNAME=nvim_default nvim"
 alias vim="NVIM_APPNAME=nvim_default nvim"
+
+# archaei : irssi hardcode xdg-compliance
+alias irssi=irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi
