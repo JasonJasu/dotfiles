@@ -15,8 +15,8 @@
 
 <br/>
 
-Writing a detailed config because I've been changing rigs and moving them metals atleast thrice in a year; no time to remember nor configure stuff in the midst of shitstorm. The dotfiles represented here have been used for atleast 4 years and still going strong. Nothing change much aside from personal customization and preferences; It's pretty damn stable.
-Desktop Configs are based on X11; Not much fancy, but its decent.
+Writing a detailed config because I've been changing rigs atleast thrice in a year; no time to remember nor configure stuff in this day and age. The dotfiles represented here have been used for atleast 4 years and still going strong. Nothing change much aside from personal customization and preferences. In other words; It's pretty damn stable.
+Desktop Configs are based on X11.
 
 # Table of Contents
 
@@ -79,6 +79,8 @@ reload all kernel modules using `mkinitcpio -P`.
 
 ## Keybinds - caps2esc
 
+As the name says, it switches capslock key to esc and vice versa.
+
 [Interception-tools - ArchWiki](https://wiki.archlinux.org/title/Interception-tools)
 [ejmastnak caps2esc](https://ejmastnak.com/tutorials/arch/caps2esc/)
 
@@ -123,11 +125,11 @@ systemctl enable udevmon.service
 systemctl status udevmon
 ```
 
-there, now your keyboard is retarded (it switches your caps key to esc and vice versa).
+Done.
 
 ## Mirrorlist Setup (for the based only)
 
-- Unlocking the dlc (lib32 x86)
+- Enabling x86 library
 
 `/etc/pacman.conf`
 
@@ -137,7 +139,7 @@ there, now your keyboard is retarded (it switches your caps key to esc and vice 
 Include = /etc/pacman.d/mirrorlist
 ```
 
-- Sorting server connection speed
+- Sorting server based on download speed
 
 ```bash
 sudo pacman -S pacman-contrib
@@ -162,7 +164,7 @@ nvim PKGBUILD # is this jit lejit?
 makepkg -si # build
 ```
 
-or if ya wanna use [gay](https://github.com/Jguer/yay) do the same step; just change the repo.
+or if you want to use [gay](https://github.com/Jguer/yay), do the same step; just change the repo.
 
 ## Fonts
 
@@ -182,8 +184,6 @@ Check all installed fonts using [fontpreview](https://github.com/sdushantha/font
 
 ## git
 
-Just copy the damn config; not gonna bother to do the shell way, or idk brah:
-
 ```bash
 git config --global user.name "bogos binted"
 git config --global user.email "twentycorpses@mybasement.com"
@@ -199,11 +199,11 @@ pacman -S thefuck # honourable mention
 
 ## Zsh
 
-Using `.zshenv` in home, applying XDG base dir standard (i know, shut up).
+Using `.zshenv` in home, applying XDG base dir standard.
 `$SHELLS_DIR` is in `$HOME/.config/shells/`.
 `$ZDOTDIR` is in `$SHELLS_DIR/zsh/`.
 `.zshrc` is in `$ZDOTDIR`.
-Other envvars are provided in the content. Just copy the configs.
+Other envvars are provided in the content.
 
 ```bash
 cp zshenv $HOME/.zshenv
@@ -212,15 +212,13 @@ cp nvim nvim_default shells vifm tmux $HOME/.config -r
 source $HOME/.zshenv && source $ZDOTDIR/.zshrc
 ```
 
-After slapping some patches, install [oh-my-zsh](ohmy.zsh) and youre done.
+After applying some patches, install [oh-my-zsh](ohmy.zsh) and you should be done.
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 # Desktop Environment
-
-Stepping in to the gui realm.
 
 These are the building blocks for the X11 desktop :
 
@@ -232,11 +230,9 @@ These are the building blocks for the X11 desktop :
 - kitty (terminal)
 - nerd fonts (mainly jetbrains mono)
 
-Now continue.
-
 ## Video Driver
 
-[red pill](https://wiki.archlinux.org/title/AMDGPU), [green pill](https://wiki.archlinux.org/title/NVIDIA), or [blue pill](https://wiki.archlinux.org/title/Intel_graphics), pick one modern man.
+[AMDGPU](https://wiki.archlinux.org/title/AMDGPU), [NVIDIA](https://wiki.archlinux.org/title/NVIDIA), or [Intel Graphics](https://wiki.archlinux.org/title/Intel_graphics), pick one based off the graphics card your machine running.
 
 ## X11
 
