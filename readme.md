@@ -222,7 +222,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 These are the building blocks for the X11 desktop :
 
-- [picom](https://github.com/jonaburg/picom) (compositor) <- Jonaburg's picom
+~~- [picom](https://github.com/jonaburg/picom) (compositor) <- Jonaburg's picom~~ fork's dead; use the main package instead [(yshui)](https://github.com/yshui/picom)
+
 - [dwm](https://dwm.suckless.org/) (window manager)
 - [dmenu](http://tools.suckless.org/dmenu/) (dynamic menu)
 - nitrogen / feh (wallpaper manager)
@@ -258,15 +259,10 @@ sudo make clean install
 
 ## Picom (Compositor)
 
-Using [jonaburg's fork](https://github.com/jonaburg/picom)
-
 ```bash
 cp config/picom $HOME/.config -r
-sudo pacman -S ninja rust
-git clone https://github.com/jonaburg/picom
-cd picom
-meson --buildtype=release . build
-ninja -C build
+sudo pacman -S picom
+picom -b #run picom in background
 ```
 
 ## Other Useful Softwares

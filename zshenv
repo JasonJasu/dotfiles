@@ -7,6 +7,7 @@ export ZDOTDIR="$SHELLS_DIR/zsh/"
 
 # archaei : omz exclusive; Path to your oh-my-zsh installation.
 export ZSH="$SHELLS_DIR/oh-my-zsh"
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # archaei : set XDG paths
@@ -25,3 +26,11 @@ export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export NPM_CONFIG_INIT_MODULE="$XDG_CONFIG_HOME"/npm/config/npm-init.js
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME"/npm
 export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR"/npm
+
+# archaei : miscellaneous
+export CALCHISTFILE="$XDG_CACHE_HOME"/calc_history
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
+# archaei : aliases to move config file according to xdg standard
+alias irssi=irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi
+alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
