@@ -1,7 +1,7 @@
 return {
   -- tools
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
@@ -28,6 +28,10 @@ return {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
           end,
+        },
+        matlab_ls = {
+          cmd = { "matlab-language-server", "--stdio" },
+          filetypes = { "matlab" },
         },
         tsserver = {
           root_dir = function(...)

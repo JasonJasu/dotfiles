@@ -9,6 +9,10 @@ return {
       out_dir = "./pdf",
       --executable = "latexmk",
     }
+    vim.g.vimtex_quickfix_ignore_filters = {
+      "Underfull",
+      "Overfull",
+    }
   end,
 }
 
