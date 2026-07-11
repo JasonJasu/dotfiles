@@ -14,7 +14,7 @@ alias ncdu="ncdu --color dark"
 
 alias sourcerc="source $ZDOTDIR/.zshrc"
 alias virc="nvim $ZDOTDIR/.zshrc"
-alias vifm="vifmrun"
+# alias vifm="vifmrun" # dont use unnless fixed; Probably never.
 alias dvim="NVIM_APPNAME=nvim_default nvim"
 alias vim="NVIM_APPNAME=nvim_default nvim"
 alias zen="zen-browser"
