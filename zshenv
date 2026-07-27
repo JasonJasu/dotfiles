@@ -2,6 +2,9 @@
 export SHELLS_DIR="$HOME/.config/shells/"
 export PATH=$SHELLS_DIR/scripts/:$HOME/.local/bin:$PATH
 
+# archaei : set default editor 
+export EDITOR=nvim
+
 # archaei : zsh envvar
 export ZDOTDIR="$SHELLS_DIR/zsh/"
 
@@ -34,3 +37,4 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 # archaei : aliases to move config file according to xdg standard
 alias irssi=irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi
 alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
+

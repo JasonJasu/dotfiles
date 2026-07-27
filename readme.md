@@ -149,6 +149,17 @@ sudo cp sortedlist /etc/pacman.d/mirrorlist
 sudo pacman -Syu
 ```
 
+or, can use [Reflector](https://wiki.archlinux.org/title/Reflector)
+
+```bash
+# takes the latest updated 20 server lists based on provided country
+# from the arch mirror status page https://archlinux.org/mirrors/status/
+sudo reflector --verbose --country Indonesia,Singapore,Japan,Australia --latest 20 --sort rate --save $HOME/rankedmirrors
+sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sudo cp $HOME/rankedmirrors /etc/pacman.d/mirrorlist
+
+```
+
 ## AUR Package Manager
 
 ```bash
