@@ -124,3 +124,6 @@ compinit -d $HOME/.zcompdumps/
 eval $(thefuck --alias)
 
 export PATH=$PATH:/home/archaei/.spicetify
+
+# archaei : xdgfriendly configs
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION" # zcompdump-
